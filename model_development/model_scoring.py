@@ -3,16 +3,16 @@ import pickle
 import numpy as np
 
 
-xgboost_model = joblib.load('../model_artifacts/xgboost_v1.joblib')
+xgboost_model = joblib.load('model_artifacts/xgboost_v1.joblib')
 
-with open('../model_artifacts/categorical_column_unique_values.pkl', 'rb') as f:
+with open('model_artifacts/categorical_column_unique_values.pkl', 'rb') as f:
     categorical_column_unique_values = pickle.load(f)
-label_encoders = {"workclass":joblib.load("../model_artifacts/label_encoder_workclass.joblib"),
-                  "education_num": joblib.load("../model_artifacts/label_encoder_education_num.joblib"),
-                  "marital_status":joblib.load("../model_artifacts/label_encoder_marital_status.joblib"),
-                  "occupation":joblib.load("../model_artifacts/label_encoder_occupation.joblib"), 
-                  "relationship":joblib.load("../model_artifacts/label_encoder_relationship.joblib"),
-                  "asset_code":joblib.load("../model_artifacts/label_encoder_asset_code.joblib")}
+label_encoders = {"workclass":joblib.load("model_artifacts/label_encoder_workclass.joblib"),
+                  "education_num": joblib.load("model_artifacts/label_encoder_education_num.joblib"),
+                  "marital_status":joblib.load("model_artifacts/label_encoder_marital_status.joblib"),
+                  "occupation":joblib.load("model_artifacts/label_encoder_occupation.joblib"), 
+                  "relationship":joblib.load("model_artifacts/label_encoder_relationship.joblib"),
+                  "asset_code":joblib.load("model_artifacts/label_encoder_asset_code.joblib")}
 
 
 def process_input_data(json_list):
