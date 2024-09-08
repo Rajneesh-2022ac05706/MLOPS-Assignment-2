@@ -1,0 +1,20 @@
+artifact_path: MLRun_CreditEligibility
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.4.2
+mlflow_version: 2.16.0
+model_size_bytes: 1314899
+model_uuid: bd155de635a943c99fcc78aebc3c7b1a
+run_id: 7e3f32245efa49eab440f340862489fe
+utc_time_created: '2024-09-08 06:09:45.264589'
